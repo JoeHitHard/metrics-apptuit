@@ -83,6 +83,7 @@ public class ApptuitPutClient {
     this.apiEndPoint = (apiEndPoint != null) ? apiEndPoint : DEFAULT_PUT_API_URI;
   }
 
+  @Deprecated
   public void put(Collection<DataPoint> dataPoints) {
     put(dataPoints, DEFAULT_SANITIZER);
   }
@@ -151,6 +152,7 @@ public class ApptuitPutClient {
     return inputStr;
   }
 
+  @Deprecated
   public void put(Collection<DataPoint> dataPoints, Sanitizer sanitizer){
     try {
       send(dataPoints, sanitizer);
